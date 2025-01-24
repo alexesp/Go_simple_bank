@@ -10,4 +10,7 @@ migratedown:
 	migrate -path db/migration -database "postgresql://root:Avintiv@localhost:5432/simple_bank?sslmode=disable" -verbose down
 sqlc:
 	sqlc generate
-.PHONY:createdb postgres dropdb migrateup migratedown sqlc
+test:
+	go test -v -cover ./...
+
+.PHONY:createdb postgres dropdb migrateup migratedown sqlc test
