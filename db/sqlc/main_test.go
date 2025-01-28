@@ -22,4 +22,17 @@ func TestMain(m *testing.M) {
 	}
 	testQueries = New(conn)
 	os.Exit(m.Run())
+
+	// config, err := util.LoadConfig("../..")
+	// if err != nil {
+	// 	log.Fatal("cannot load config:", err)
+	// }
+
+	// connPool, err := pgxpool.New(context.Background(), config.DBSource)
+	// if err != nil {
+	// 	log.Fatal("cannot connect to db:", err)
+	// }
+
+	// testStore = NewStore(connPool)
+	// os.Exit(m.Run())
 }
